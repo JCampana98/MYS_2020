@@ -1,0 +1,8 @@
+Se busco realizar el programa de la manera mas simple posible,
+sin utilizar ningun paquete que no venga con el interprete
+para evitar el fallo del script en cualquier otra computadora. 
+
+Utiliza 3 paquetes que son:
+  -Time (Para detener la simulacion entre cada step)
+  -Random (Para crear una grilla aleatoria)
+  -System (Para poder limpiar la consola entre steps
