@@ -1,2 +1,2 @@
-# MYS_2020
-Repositorio para la práctica de Modelos y Simulación. 
+# Ecuación Cuadrática del Sistema Poblacional
+Repositorio para la resolución de la ecuacion cuadratica planteada. 
