@@ -1,0 +1,9 @@
+Requerimientos:
+  + Python 3.8.3
+  Y las siguientes librerias:
+    + matplotlib
+    + scipy
+    + numpy
+    
+Para usar este script simplemente se debe utilizar el interprete de python. 
+Comando: "python presapredador.py"
