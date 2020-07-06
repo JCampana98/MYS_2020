@@ -1,2 +1,3 @@
 Caracteristicas sin implementar:
   + Cambio de los parametros iniciales fuera del script.
+  + Separación de las caracteristicas del programa en funciones.
