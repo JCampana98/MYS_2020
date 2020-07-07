@@ -1,0 +1,65 @@
+# presapredador.py
+
+  - El Script de python realizara los calculos necesarios para avirguar los distintos estados de la poblacion de zorros y liebres respecto del tiempo.
+  - El Script almacena en la carpeta donde se corre, los graficos de elongación, fase y punto de equilibrio.
+  - Se ejecuta de manera lineal, este script no tiene creadas funciones para las distintas etapas del calculo matematico.
+  - Las condiciones iniciales se deben cambiar en el codigo fuente. (Las condiciones iniciales establecidas son 500 liebres y 10 zorros)
+
+## El Modelo de Presa-Predador de Lotka-Volterra
+
+  Se parte de las siguientes hipótesis:
+
+  - La especie depredadora se alimenta solo de la especie presa, mientras que ésta se nutre de un recurso que se encuentra en el hábitat en grandes cantidades.
+  - Las dos poblaciones eran homogéneas, es decir, los parámetros de edad y sexo no cuentan.
+  - Las características son las mismas en todo el hábitat.
+  - La probabilidad de interacción entre ambas especies es la misma.
+  
+  **El Modelo de Presa-Predador de Lotka-Volterra** es un sistema formado por un par de ecuaciones diferenciales de primer orden no lineales que modeliza el crecimiento de dos poblaciones que interactúan (Depredador y Presa).
+  
+  Tales ecuaciones se definen como:
+   
+  > dx/dt = r1 . x – p . x . y
+  > dy/dt = − r2 . y + a . y . x
+  
+  Cuyos parametros son:
+  - r1 = r1 0.1 (Tasa de crecimiento de la presa)
+  - p = r1 0.02 (Probabilidad de caza(0 < P < 1) P < P < 1) 1))
+  - r2 = r1 0.3 (Tasa de mortalidad del predador en ausencia de la presa)
+  - a = r1 0.01 (Tasa de crecimiento del predador por presa cazada)
+
+  Para los siguientes calculos, cambiaremos las condiciones iniciales, siendo estas la cantidad de liebres y zorros en la primer semana.
+  
+## 500 Liebres y 10 Zorros
+ 
+  ![Elongación](grafico_de_elongacion.png)
+  
+  ![Fase](grafico_de_fase.png)
+  
+  ![Estabilidad](grafico_punto_de_estabilidad.png)
+
+## 1000 Liebres y 10 Zorros
+ 
+  ![Elongación](grafico_de_elongacion_1000liebres.png)
+  
+  ![Fase](grafico_de_fase_1000liebres.png)
+  
+  ![Estabilidad](grafico_punto_de_estabilidad_1000liebres.png)
+  
+## 2000 Liebres y 100 Zorros
+ 
+  ![Elongación](grafico_de_elongacion_2000liebres_100zorros.png)
+  
+  ![Fase](grafico_de_fase_2000liebres_100zorros.png)
+  
+  ![Estabilidad](grafico_punto_de_estabilidad_2000liebres_100zorros.png)
+  
+# Diagrama de Elongación
+  
+  Este gráfico representa el estado de la población de los zorros y las liebres a lo largo del tiempo. Se contraponen los graficos de ambas poblaciones a lo largo del tiempo.
+  Se puede notar que a medida que aumentan los depredadores. 
+  Logicamente, los zorros se van alimentando de las liebres y su poblacion tiende a disminuir, pero a su vez, si hay menos liebres, mas zorros van a comenzar a morir por inanicion por lo que la poblacion tiende a estabilizarse en cierto punto.
+  
+# Diagrama de Fase
+
+  Este gráfico representa la variacion de las poblaciones, utilizando como ejes las poblaciones de la presa y el predador.
+  Este diagrama va a ir variando hasta llegar finalmente al punto de equilibrio.
