@@ -1,8 +1,24 @@
-Se busco realizar el programa de la manera mas simple posible,
-sin utilizar ningun paquete que no venga con el interprete
-para evitar el fallo del script en cualquier otra computadora. 
+# montecarlo.py
 
-Utiliza 3 paquetes que son:
-  -Time (Para detener la simulacion entre cada step)
-  -Random (Para crear una grilla aleatoria)
-  -System (Para poder limpiar la consola entre steps
+  El Script de python calculara las medidas estadisticas de los datos historicos en base a las visitas al sitio, y en base a esos datos historicos, se aplicara el método de Montecarlo para generar los datos estimados de futuras visitas a la pagina web.
+  Los calculos de las medidas estadisticas se encuentran separados en distintas funciones para la facilidad de reutilización de estos metodos.
+  El Script no se encuentra separado en funciones, por lo que realiza las tareas de manera lineal.
+
+## Metodo de Montecarlo
+  
+  El **Algoritmo de Montecarlo** es un metodo estadistico numerico que nos permite aproximar expresiones matematicas complejas.
+  En este caso, se busca realizar una predicción de las visitas que tendra un sitio web en los proximos **100** dias.
+  Lo primero que hace el script al inicio es un calculo de todas las medidas estadisticas de los datos historicos que luego muestra por pantalla.
+  En base a estos datos se obtiene la distribucion normal y acumulada de los datos que ayudaran al calculo de los datos estimados para los proximos 100 dias.
+  
+  ![Distribucion Normal](distribucion_normal.jpg)
+  
+  ![Distribucion Acumulada](distribucion_acumulada.jpg)
+  
+  Se utilizo la funcion "*random*" para generar 100 valores aleatorios entre el 0 y el 1 que ayudaran a la predicción de los datos estimados.
+  Comparando los valores aleatorios con la distribucion acumulada de los datos historicos, se logra obtener los datos estimados para los proximos 100 dias.
+  Si analizaramos las medidas estadisticas tanto de los datos historicos como de los generados, se puede observar que las medidas de ambos son bastante parecidas.
+  
+  ![Valores Aleatorios](randoms.jpg)
+  
+  ![Distribucion Acumulada Generados](visitas_estimadas.jpg)
